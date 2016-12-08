@@ -4,7 +4,9 @@ class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
   def index
-    @pictures = Picture.all
+    access_token = params[:code]
+    client = Instagram.client(:access_token => access_token)
+    @pictures = client.user_recent_media
   end
 
   # GET /pictures/1

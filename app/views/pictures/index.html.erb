@@ -10,11 +10,14 @@
   </thead>
 
   <tbody>
-    <% @pictures.each do |picture| %>
+    <% @pictures.each do |media_item| %>
       <tr>
-        <td><%= link_to 'Show', picture %></td>
+        <!-- <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        <td>
+          <img src="<%= media_item.images.thumbnail.url %>">
+        </td>
       </tr>
     <% end %>
   </tbody>
