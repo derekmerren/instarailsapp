@@ -5,13 +5,13 @@
 #   gem 'mysql'
 #
 default: &default
-  adapter: mysql2
-  encoding: utf8
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   username: root
   password:
-  host: 127.0.0.1
-  port: 3306
-  
+  host: localhost
+
 development:
   <<: *default
   database: instarailsapp-dev
