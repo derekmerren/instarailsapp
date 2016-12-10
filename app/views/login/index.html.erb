@@ -1,5 +1,5 @@
-<h1>Login#index</h1>
-<p>Find me in app/views/login/index.html.erb</p>
-<p>
-  <a href="https://api.instagram.com/oauth/authorize/?client_id=7a9907fe3000499f8f67e54e2fa47df4&redirect_uri=<%=  URI.encode(CALLBACK_URL) %>&response_type=code">Instagram Login</a>
-</p>
+<div class="container-fluid bg-faded rounded p-1">
+  <p>
+    <a href="<%= LOGIN_URL %>" class="btn btn-primary btn-lg">Login with Instagram <%= fa_icon 'instagram' %></a>
+  </p>
+</div>

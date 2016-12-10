@@ -1,25 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Pictures</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pictures.each do |media_item| %>
-      <tr>
-        <td>
-          <img src="<%= media_item.images.thumbnail.url %>">
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Picture', new_picture_path %>
+<% if flash[:notice] %>
+  <div class="alert alert-danger" role="alert">
+    <%= notice %>
+    <strong><a href="<%= LOGIN_URL %>">Login to Instagram.</a></strong>
+  </div>
+<% else %>
+  <div class="container-fluid bg-faded rounded pl-1 pt-1">
+    <h2><%= @pictures.first.user.username %>'s pictures</h2>
+    <div class="row">
+      <% @pictures.each do |picture| %>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <img src="<%= picture.images.low_resolution.url %>" class="rounded img-fluid mr-1 mb-1">
+            <p><%= picture.caption.nil? ? '' : picture.caption.text %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

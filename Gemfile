@@ -17,6 +17,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+#The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. http://getbootstrap.com
+gem 'bootstrap', '~> 4.0.0.alpha5'
+# Fontawesome packaged for Rails Asset Pipeline
+gem 'font-awesome-rails', '~> 4.7'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

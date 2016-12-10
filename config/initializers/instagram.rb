@@ -6,3 +6,4 @@ Instagram.configure do |config|
 end
 
 CALLBACK_URL = Rails.application.config.instagram_callback_url
+LOGIN_URL = "https://api.instagram.com/oauth/authorize/?client_id=#{Instagram.client_id}&redirect_uri=#{URI.encode(CALLBACK_URL)}&response_type=code"
