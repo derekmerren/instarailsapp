@@ -12,9 +12,6 @@
   <tbody>
     <% @pictures.each do |media_item| %>
       <tr>
-        <td><%= link_to 'Show', media_item %></td>
-        <td><%= link_to 'Edit', edit_picture_path(media_item) %></td>
-        <td><%= link_to 'Destroy', media_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td>
           <img src="<%= media_item.images.thumbnail.url %>">
         </td>
