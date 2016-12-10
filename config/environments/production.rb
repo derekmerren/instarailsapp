@@ -83,4 +83,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Instagram authentication callback url
+  config.instagram_callback_url = 'http://instarailsapp.herokuapp.com/login/create'
 end

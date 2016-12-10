@@ -5,5 +5,4 @@ Instagram.configure do |config|
   config.client_secret = "25a176d74547425dab2fdcdd339bf96c"
 end
 
-CALLBACK_URL = "http://instarailsapp.herokuapp.com/login/create"
-# CALLBACK_URL = "http://localhost:3000/login/create"
+CALLBACK_URL = Rails.application.config.instagram_callback_url
