@@ -8,11 +8,13 @@
     <h2><%= @pictures.first.user.username %>'s pictures</h2>
     <div class="row">
       <% @pictures.each do |picture| %>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <img src="<%= picture.images.low_resolution.url %>" class="rounded img-fluid mr-1 mb-1">
-            <p><%= picture.caption.nil? ? '' : picture.caption.text %></p>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 image-container">
+          <img src="<%= picture.images.low_resolution.url %>" class="rounded img-fluid mr-1 mb-1" data-toggle="modal" data-target="#zoom-modal" data-image-large-url="<%= picture.images.standard_resolution.url %>" data-image-caption="<%= picture.caption.nil? ? '' : picture.caption.text %>">
+          <p class="ml-0"><%= picture.caption.nil? ? '' : picture.caption.text %></p>
+          <i class="fa fa-search" aria-hidden="true"></i>
         </div>
       <% end %>
     </div>
   </div>
 <% end %>
+<%= render "zoom_modal" %>
