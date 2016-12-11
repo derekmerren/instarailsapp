@@ -19,6 +19,8 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 #The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. http://getbootstrap.com
 gem 'bootstrap', '~> 4.0.0.alpha5'
+# A client-side library to make absolutely positioned elements attach to elements in the page efficiently.
+gem 'rails-assets-tether', '~> 1.1', '>= 1.1.1'
 # Fontawesome packaged for Rails Asset Pipeline
 gem 'font-awesome-rails', '~> 4.7'
 
