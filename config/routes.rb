@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/', to: 'login#index'
+  get '/', to: 'login#new'
   get '/login/create', to: 'login#create'
 
   resources :pictures
