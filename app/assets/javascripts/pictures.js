@@ -3,7 +3,6 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 $( document ).ready(function() {
   $('#zoom-modal').on('show.bs.modal', function (event) {
-    console.log('modal opened')
     var image = $(event.relatedTarget) // Button that triggered the modal
     // Extract info from data-* attributes
     var bigImageUrl = image.data('image-large-url')
