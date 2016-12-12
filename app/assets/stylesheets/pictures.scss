@@ -4,5 +4,6 @@
 
 .image-container {
   position: relative;
-  i { position: absolute; top: 0.5rem; right: 1.5rem; opacity: 0.6; }
+  img { cursor: pointer; };
+  i { position: absolute; top: 0.5rem; right: 1.5rem; opacity: 0.6; pointer-events: none; }
 }
